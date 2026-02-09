@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
 </style>
 </head>
 <body>
+
 
 <!-- Navbar -->
 <div class="w3-top">
@@ -35,11 +37,12 @@ body {font-family: "Lato", sans-serif}
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACTO</a>
 </div>
 
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
 
-  
-   <!-- The Tour Section -->
+
+
+  <!-- The Tour Section -->
   <div class="w3-black" id="tour">
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
       <h2 class="w3-wide w3-center">FOTOS</h2>
@@ -65,33 +68,66 @@ body {font-family: "Lato", sans-serif}
         </div>       
       </div>
       </div>
-                   <!-- The Tour Section -->
-  <div class="w3-black" id="tour">
-      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        <div class="w3-third w3-margin-bottom">
-          <img src="imagenes/bandmemberr.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
-    <div>
 
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="imagenes/bandmemberrr.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
-          <div>
-    
-            
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="imagenes/bandmembe.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
-          <div>
-            
-  </div>
-  </div>
-  </div>
-  </div>
+<!-- Photo Grid -->
+<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+  <div class="w3-third">
+    <img src="/w3images/rocks.jpg" style="width:100%">
+    <img src="/w3images/sound.jpg" style="width:100%">
+    <img src="/w3images/woods.jpg" style="width:100%">
+    <img src="/w3images/rock.jpg" style="width:100%">
+    <img src="/w3images/nature.jpg" style="width:100%">
+    <img src="/w3images/mist.jpg" style="width:100%">
   </div>
 
-           <footer><p><a href="https://www.w3schools.com/w3css/tryw3css_templates_band.htm" title="PLANTILLA" target="_black" class="w3-hover-text-green">PLANTILLA</a></p>
+  <div class="w3-third">
+    <img src="/w3images/coffee.jpg" style="width:100%">
+    <img src="/w3images/bridge.jpg" style="width:100%">
+    <img src="/w3images/notebook.jpg" style="width:100%">
+    <img src="/w3images/london.jpg" style="width:100%">
+    <img src="/w3images/rocks.jpg" style="width:100%">
+    <img src="/w3images/avatar_g.jpg" style="width:100%">
+  </div>
+
+  <div class="w3-third">
+    <img src="/w3images/mist.jpg" style="width:100%">
+    <img src="/w3images/workbench.jpg" style="width:100%">
+    <img src="/w3images/gondol.jpg" style="width:100%">
+    <img src="/w3images/skies.jpg" style="width:100%">
+    <img src="/w3images/lights.jpg" style="width:100%">
+    <img src="/w3images/workshop.jpg" style="width:100%">
+  </div>
+</div>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
+  <p class="w3-medium"><a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">PLANTILLA</a></p>
 </footer>
+ 
+<script>
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else { 
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
 </body>
 </html>
